@@ -5,6 +5,10 @@ import java.util.Arrays;
 public class ConvertArraysToStream {
 
 	public void convertArraysTOStream(int ars[]) {
-		Arrays.stream(ars).forEach(e -> System.out.println(e));
+		Stream<Integer> stream = Arrays.stream(ars);
+		Integer arrsLength = stream.count();
+
+		
+		System.out.println(arrsLength);
 	}
 }
