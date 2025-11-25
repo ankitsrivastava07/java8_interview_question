@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.ArrayList;
 
-public class ConvertListOfObjectTOMAP {
+public class NotesOperation {
 
 	public void convertListOfObjectTOMAPUsingGroupBy() {
 
