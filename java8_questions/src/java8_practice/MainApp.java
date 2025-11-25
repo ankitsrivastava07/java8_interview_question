@@ -3,22 +3,8 @@ package java8_practice;
 import java.util.List;
 import java.util.Arrays;
 
-import java8_practice.problems.ConvertListOfObjectTOMAP;
-import java8_practice.problems.ConvertStringArrayToSingleStringVariable;
-import java8_practice.problems.CountOFEachWord;
 import java8_practice.problems.CountTotalNum;
-import java8_practice.problems.FirstElementFromList;
-import java8_practice.problems.FirstNonRepeatCharacter;
-import java8_practice.problems.FirstRepeatingCharacter;
-import java8_practice.problems.GroupEmp;
-import java8_practice.problems.HighPaidEmployeeFromEachDepartment;
-import java8_practice.problems.MaxElementFromList;
-import java8_practice.problems.MinElementFromList;
 import java8_practice.problems.PartitionEvenAndOddNumber;
-import java8_practice.problems.SortNumberInList;
-import java8_practice.problems.SumOfElements;
-import java8_practice.problems.SumOfNaturalNumber;
-import java8_practice.problems.SumOfSalaryByDept;
 import java8_practice.problems.dto.Employee;
 
 public class MainApp {
