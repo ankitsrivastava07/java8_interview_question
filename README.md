@@ -26,3 +26,16 @@ Comparator.compare(Employee::getSalary))), Optional::get)
 )))
 
 Q) Find max element:- nums.stream().max(Integer::compare).orElse(null);
+
+Q) Find Maximum String by order 
+   Arrays.stream(str.split("\\s+"))
+                .distinct()
+                .collect(Collectors.groupingBy(String::length,
+                        () -> new TreeMap<>(Comparator.reverseOrder()),
+                        Collectors.toList()))
+                .entrySet()
+                .stream()
+                .skip(1)
+                .map(e -> e.getValue().get(0))
+                .findFirst()
+                .orElse("");
