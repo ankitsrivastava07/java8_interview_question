@@ -39,3 +39,16 @@ Q) Find Maximum String by order
                 .map(e -> e.getValue().get(0))
                 .findFirst()
                 .orElse("");
+
+Q) Move zero to right place
+int nums[] = {};
+int ind = 0;
+for(int i=0;i<nums.length;i++)
+{
+  if(nums[i]!=0)
+    nums[ind++]= nums[i];
+}
+
+while(ind<nums.length) {
+   nums[ind++]=0;
+}
