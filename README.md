@@ -54,3 +54,6 @@ while(ind<nums.length) {
 
 Q) Find All employee by department.
 Map<String,List<Employee>> result = emps.stream().collect(Collectors.groupingBy(Employee::getDepartment));
+
+Q) Find all 3 three highest number
+nums.stream().sorted(Comparator.reverseOrder).limit(3);
