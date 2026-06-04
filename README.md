@@ -51,3 +51,6 @@ for(int i=0;i<nums.length;i++)
 while(ind<nums.length) {
    nums[ind++]=0;
 }
+
+Q) Find All employee by department.
+Map<String,List<Employee>> result = emps.stream().collect(Collectors.groupingBy(Employee::getDepartment));
