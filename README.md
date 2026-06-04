@@ -103,4 +103,4 @@ Q.) What is Garbage Collectors ?
 Ans:- Garbage collectors remove unused object from the heap memory.
 
 Q) What does happen if partion less than consumers instance ?
-Ans:- Most of the Consumer instance will sit idle.
+Ans:- Consumer instance will sit idle.
