@@ -73,3 +73,6 @@ java -Xss1m MyApp
 
 Q) Find List of employees by department name
 emps.stream().collect(Collectors.groupingBy(Employee::getDept))
+
+Q) What is Class Loader in Java ?
+Ans:- Class loader is the internal part of Java Runtime Enviromennt(JRE) that dynamically loads Java Classes into the JVM.
