@@ -76,3 +76,25 @@ emps.stream().collect(Collectors.groupingBy(Employee::getDept))
 
 Q) What is Class Loader in Java ?
 Ans:- Class loader is the internal part of Java Runtime Enviromennt(JRE) that dynamically loads Java Classes into the JVM.
+
+Q) What is Double check in Single Ton class ?
+Ans:- Double check locking is a design pattern used to optimized thread-safe Lazy initialization in a Single Ton class. It reduces overhead by checking the initiliazation flag twice.
+
+public class SingleTon {
+
+private static volatile SingleTon singleTon;
+
+private SingleTon() {}
+
+public static SingleTon getInstance() {
+if(instance == null)
+{
+ syncronized(SingleTon.class) {
+ if(instance == null) {
+   instance = new Instance();
+ }
+ }
+}
+}
+
+}
