@@ -57,3 +57,19 @@ Map<String,List<Employee>> result = emps.stream().collect(Collectors.groupingBy(
 
 Q) Find all 3 three highest number
 nums.stream().sorted(Comparator.reverseOrder).limit(3);
+
+Q) How do we increase JVM memory in Java ?
+Ans:- To increase memory in the JVM you configure it using command line options when starting your Java applications.
+These option control heap size and stack size and other memory regions.
+----------------------------
+1.) Heap Size
+Initial Heap Size:- -Xms
+Maximum Heap Size:- -Xmx
+java -Xms512m -Xmx1024m MyApp
+2.) Stack Size
+controls memory per thread 
+Options:- -Xss
+java -Xss1m MyApp
+
+Q) Find List of employees by department name
+emps.stream().collect(Collectors.groupingBy(Employee::getDept))
