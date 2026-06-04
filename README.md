@@ -98,3 +98,6 @@ if(instance == null)
 }
 
 }
+
+Q.) What is Garbage Collectors ?
+Ans:- Garbage collectors remove unused object from the heap memory.
