@@ -102,5 +102,27 @@ if(instance == null)
 Q.) What is Garbage Collectors ?
 Ans:- Garbage collectors remove unused object from the heap memory.
 
+Q) Difference between Collections and ArrayList ?
+Collections (belonging to the java.util package) is a utility class consisting exclusively of static methods that operate on or return collections. You cannot instantiate it. Instead, you use it as a toolbox to manipulate existing data structures.
+
+Common Uses: Sorting a list, reversing a list, finding the maximum element, or making a collection thread-safe.
+
+Syntax Example:
+
+Java
+// You don't use 'new'. You call methods directly on the class.
+Collections.sort(myArrayList);
+Collections.reverse(myArrayList);
+
+Alternative: Sorting an ArrayList
+If you are using a standard ArrayList (which does not sort itself automatically), you can use the Collections.sort() utility method we discussed earlier to sort it on demand:
+
+Java
+ArrayList<Integer> list = new ArrayList<>(List.of(5, 1, 10));
+Collections.sort(list); // Changes list to [1, 5, 10]
+
 Q) What does happen if partion less than consumers instance ?
 Ans:- Consumer instance will sit idle.
+
+Q) There is a Batch Job find one day before always from today date ?
+Ans:- 
