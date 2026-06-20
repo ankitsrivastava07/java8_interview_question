@@ -126,3 +126,28 @@ Ans:- Consumer instance will sit idle.
 
 Q) There is a Batch Job find one day before always from today date ?
 Ans:- 
+
+Q.) URL Shortner in microservices 
+public class URLShortner {
+private final String SEED = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+private final Map<String,String> uriEncryptionDec = new HashMap<>();
+private String BASE_HOST = "http://tinyurl.com/";
+
+public String encode(String longURL) {
+String key = generateKey();
+uriEncryptionDec.put(key, longURL);
+  return BASE_HOST + key;
+}
+
+public String decode(String shortURL){
+  return uriEncryptionDec.get(shortURL);
+}
+
+public String generateKey() {
+StringBuilder sb = new StringBuilder();
+  for(int i=0;i<6;i++) {
+  int ind = (int)Math.random() * SEED.length();
+  sb.append(SEED.charAt(ind));
+}
+return sb.toString();
+}
