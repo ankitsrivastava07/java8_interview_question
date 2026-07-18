@@ -1,7 +1,9 @@
 package java8_practice;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Arrays;
+import java.util.Set;
 
 import java8_practice.problems.CountTotalNum;
 import java8_practice.problems.PartitionEvenAndOddNumber;
@@ -9,13 +11,13 @@ import java8_practice.problems.dto.Employee;
 
 public class MainApp {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		List<Integer> numbers = Arrays.asList(10, 15, 8, 49, 25, 98, 32, 15);
-		long count = new CountTotalNum().countTotalNumber(numbers);
-		System.out.println("Count Total Number of element in List " + count);
+        List<Integer> numbers = Arrays.asList(10, 15, 8, 49, 25, 98, 32, 15);
+        long count = new CountTotalNum().countTotalNumber(numbers);
+        System.out.println("Count Total Number of element in List " + count);
 
-		// Remove Duplicate Numbers from List
+		/*// Remove Duplicate Numbers from List
 		// new RemoveDuplicateNumbrs().removeDuplicateNumbrs(Arrays.asList(10, 15, 8,
 		// 49, 25, 98, 98, 32, 15));
 
@@ -93,6 +95,14 @@ public class MainApp {
 		new PartitionEvenAndOddNumber().partitionEvenAndOddNumber(numbers);
 		new PartitionEvenAndOddNumber().partitionEvenAndOddNumberSecondApproach(numbers);
 
-	}
+		*/
+
+        Set<Integer> uniqueNumbers = new HashSet<>();
+        numbers.stream().filter(e -> !uniqueNumbers.add(e))
+                .distinct()
+                .forEach(System.out::println);
+
+
+    }
 
 }
