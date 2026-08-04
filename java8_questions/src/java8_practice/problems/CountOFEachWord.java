@@ -9,7 +9,7 @@ public class CountOFEachWord {
 	public void calculateCountOfEachWord() {
 		String str = "Java 8 has new feature like java code optimizer or concise code";
 
-		System.out.print(Arrays.stream(str.split(" ")).collect(Collectors.groupingBy(word -> word,
+		System.out.print(Arrays.stream(str.split("\\s+")).collect(Collectors.groupingBy(word -> word,
 				() -> new TreeMap<>(String.CASE_INSENSITIVE_ORDER), Collectors.counting())));
 	}
 }
